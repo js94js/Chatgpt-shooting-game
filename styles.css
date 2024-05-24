@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#startScreen, #gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#startScreen {
+    display: block;
+}
+
+#gameOver {
+    z-index: 10; /* Ensure it appears above all other elements */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#hud {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#weaponInfo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+#weaponIcon {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    margin-right: 8px;
+    border-radius: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#weaponText, #weaponTimer, #difficultyLevel {
+    font-size: 20px;
+}
+
+#scoreInfo {
+    font-size: 18px;
+}
+
+#gameContainer {
+    position: relative;
+    width: 800px;
+}
+
+#gameCanvas {
+    background-color: #000;
+    border: 2px solid #fff;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#healthContainer {
+    width: 800px;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+#healthBar {
+    height: 100%;
+    width: 100%;
+    transition: width 0.2s, background-color 0.2s;
+    border-radius: 10px;
+}
+
+#healthText {
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+#powerUpIndicators {
+    display: flex;
+    align-items: center;
+}
+
+.power-up-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}

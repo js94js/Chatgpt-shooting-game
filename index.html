@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Explorer: Survival</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Space Explorer: Survival</h1>
+        <p>Press Enter to Start</p>
+    </div>
+    <div id="hud" class="hidden">
+        <div id="weaponInfo">
+            <span id="weaponIcon"></span>
+            <span id="weaponText">Weapon: normal</span>
+        </div>
+        <div id="weaponTimer"></div>
+        <div id="scoreInfo">
+            <div id="currentScore">Current Score: 0</div>
+            <div id="highScore">High Score: 0</div>
+        </div>
+        <div id="difficultyLevel">Difficulty Level: 1</div>
+        <div id="powerUpIndicators"></div>
+    </div>
+    <div id="gameContainer" class="hidden">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+    <div id="healthContainer">
+        <div id="healthBar"></div>
+        <div id="healthText">100 / 100</div>
+    </div>
+    <div id="gameOver">
+        <h1>Game Over</h1>
+        <p>Press Enter to Restart</p>
+        <button onclick="restartGame()">Try Again</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
